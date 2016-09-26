@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1d1c2e"
+
+
+    tools:context="com.dineo.bmi.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="24dp"
+        android:background="@drawable/layout"
+        android:weightSum="3">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="BMI Calculator"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top"
+            android:layout_weight="1"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_weight="0.2"
+                android:text="Choose your weight range :"
+                android:layout_gravity="center"/>
+            <RadioGroup
+                android:id="@+id/weight_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.8"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+                <RadioButton
+                    android:id="@+id/small_rgb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:onClick="Weights"
+                    android:text="0 - 49"
+                    />
+
+                <RadioButton
+                    android:id="@+id/medium_rgb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:onClick="Weights"
+                    android:text="50 - 64"/>
+                <RadioButton
+                    android:id="@+id/large_rgb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="65 - 100"/>
+            </RadioGroup>
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:text="Enter your height :"
+            />
+
+        <EditText
+            android:id="@+id/edt_Height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:inputType="number"
+            android:hint="0"/>
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+        <Button
+            android:id="@+id/btn_Calc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:layout_gravity="center|bottom"
+            android:gravity="center"
+            android:background="@drawable/layout_btn"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/results_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="24dp"
+            android:textSize="15dp"
+            android:text="........."
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
